@@ -1,4 +1,4 @@
-import css from '../css/Statistics.module.css';
+import css from './Statistics.module.css';
 
 export const Statistics = ({ title, stats }) => {
      return <section className={css.statistics}>

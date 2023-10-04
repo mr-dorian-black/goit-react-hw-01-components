@@ -1,4 +1,4 @@
-import css from '../css/FriendList.module.css'
+import css from './FriendList.module.css'
 
 export const FriendList = ({ friends }) => {
      return <ul className={css['friend-list']}>
