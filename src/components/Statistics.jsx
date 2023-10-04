@@ -1,14 +1,17 @@
 import css from '../css/Statistics.module.css';
 
 export const Statistics = ({ title, stats }) => {
-     return <section class={css.statistics}>
-          {title && (<h2 class={css.title}>{ title }</h2>) }
+     return <section className={css.statistics}>
+          {title && (<h2 className={css.title}>{ title }</h2>) }
           
-          <ul class={css["stat-list"]}>
+          <ul className={css["stat-list"]}>
                {stats.map(stat => {
-                    return <li key={stat.id} class={css.item}>
-                         <span class={css.label}>{stat.label}</span>
-                         <span class={css.percentage}>{ stat.percentage }</span>
+                    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                    return <li key={stat.id} className={css.item} style={{
+                         backgroundColor: `#${randomColor}`
+                    }}>
+                         <span className={css.label}>{stat.label}</span>
+                         <span className={css.percentage}>{ stat.percentage }%</span>
                     </li>
                })}
           </ul>
